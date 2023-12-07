@@ -1,0 +1,58 @@
+{
+  "id": "4356784",
+  "name": "CSS設計完全ガイド",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "4766253",
+      "name": "check-square",
+      "font_class": "check-square",
+      "unicode": "e7a8",
+      "unicode_decimal": 59304
+    },
+    {
+      "icon_id": "4766469",
+      "name": "file-excel",
+      "font_class": "file-excel",
+      "unicode": "e7b7",
+      "unicode_decimal": 59319
+    },
+    {
+      "icon_id": "12692986",
+      "name": "file-powerpoint",
+      "font_class": "file-powerpoint",
+      "unicode": "e81a",
+      "unicode_decimal": 59418
+    },
+    {
+      "icon_id": "4766472",
+      "name": "file-pdf",
+      "font_class": "file-pdf",
+      "unicode": "e7b8",
+      "unicode_decimal": 59320
+    },
+    {
+      "icon_id": "1370",
+      "name": "放大",
+      "font_class": "fangda",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "5810181",
+      "name": "arrow_right",
+      "font_class": "arrow_right",
+      "unicode": "e7e4",
+      "unicode_decimal": 59364
+    },
+    {
+      "icon_id": "11348981",
+      "name": "download",
+      "font_class": "download",
+      "unicode": "e621",
+      "unicode_decimal": 58913
+    }
+  ]
+}

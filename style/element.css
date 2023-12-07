@@ -1,0 +1,279 @@
+/* 按钮 */
+.el_btn {
+  /* 方便布局 */
+  display: inline-block;
+  /* 文本内容不堆积在边框 */
+  padding: 20px 10px;
+  /* 自动换行 */
+  width: 300px;
+  /* 不会被截断(屏幕窄时) */
+  max-width: 100%;
+  /* 随字体大小变化 */
+  font-size: 1.125rem;
+  text-align: center;
+  text-decoration: none;
+  /* transparent 颜色继承bgc 提前准备好切换的border */
+  border: 2px solid transparent;
+  color: #fff;
+  background-color: #e25c00;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+  transition: .25s;
+}
+
+.el_btn:focus,
+.el_btn:hover {
+  /* currentColor关键字 和color值相同 */
+  border-color: currentColor;
+  color: #e25c00;
+  background-color: #fff;
+}
+
+/* __右箭头按钮 */
+.el_btn.el_btn__arrowRight {
+  position: relative;
+  /* 加大右边距 边距使用相对量避免与字标发生重叠 */
+  padding-right: 2em;
+  padding-left: 1.38em;
+}
+
+.el_btn.el_btn__arrowRight::after {
+  content: "\e7e4";
+  /* top: 50% + transform: translateY（-50%）= 绝对定位垂直居中 */
+  position: absolute;
+  top: 50%;
+  right: .83em;
+  transform: translateY(-50%);
+  font-family: "iconfont";
+  font-weight: 900;
+}
+
+/* __大按钮 */
+.el_btn.el_btn__large {
+  width: 340px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  font-size: 1.375rem;
+}
+
+/* __黄色按钮 */
+.el_btn.el_btn__yellow {
+  color: #222;
+  background-color: #f1de00;
+}
+
+.el_btn.el_btn__yellow:focus,
+.el_btn.el_btn__yellow:hover {
+  color: #222;
+  background-color: #fff;
+  border-color: #f1de00;
+}
+
+/* 圆角按钮 */
+.el_roundedBtn {
+  display: inline-block;
+  width: 236px;
+  max-width: 100%;
+  padding: 15px 10px;
+  background-color: #e25c00;
+  border: 2px solid transparent;
+  border-bottom-color: #d40152;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1.125rem;
+  text-align: center;
+  text-decoration: none;
+  transition: .25s;
+}
+
+.el_roundedBtn.el_roundedBtn:focus,
+.el_roundedBtn.el_roundedBtn:hover {
+  background-color: #fff;
+  border-color: currentColor;
+  color: #e25c00;
+}
+
+/* 带图标的小按钮 */
+.el_beforeIconBtn {
+  position: relative;
+  display: inline-block;
+  padding: .2em .3em;
+  border: 1px solid currentColor;
+  color: #e25c00;
+  text-decoration: none;
+  transition: .25s;
+}
+
+.el_beforeIconBtn:focus,
+.el_beforeIconBtn:hover {
+  background-color: #e25c00;
+  color: #fff;
+}
+
+.el_beforeIconBtn::before {
+  /* 使用相对值来实现边距 可以保持位置的相对关系(随字体大小变化) */
+  margin-right: .5em;
+  font-family: "iconfont";
+  font-weight: 900;
+}
+
+/* __下载按钮 */
+.el_beforeIconBtn.el_beforeIconBtn__download::before {
+  content: "\e621";
+}
+
+/* __放大按钮 */
+.el_beforeIconBtn.el_beforeIconBtn__zoom::before {
+  content: "\e600";
+  display: inline-block;
+  transform: translateY(-6%);
+}
+
+/* 前置图标 */
+.el_beforeIcon::before {
+  display: inline-block;
+  margin-right: .3em;
+  color: #e25c00;
+  font-family: "iconfont";
+  font-weight: 400;
+}
+
+/* 前置pdf图标 */
+.el_beforeIcon.el_beforeIcon__pdf::before {
+  content: "\e7b8";
+}
+
+/* 其他图标 */
+/* __excel文件 */
+.el_beforeIcon.el_beforeIcon__excel::before {
+  content: '\e7b7';
+}
+
+/* __PowerPoint文件 */
+.el_beforeIcon.el_beforeIcon__PP::before {
+  content: '\e81a';
+}
+
+/* __选择框(已选) */
+.el_beforeIcon.el_beforeIcon__checkSquare::before {
+  content: '\e7a8';
+}
+
+/* __左无柄箭头 */
+.el_beforeIcon.el_beforeIcon__chevLeft::before {
+  content: '';
+  width: .375em;
+  height: .375em;
+  border-bottom: .125em solid #e25c00;
+  border-left: .125em solid #e25c00;
+  transform: rotate(45deg) translateY(-30%);
+}
+
+/* 后置图标 */
+.el_afterIcon::after {
+  display: inline-block;
+  margin-left: .3em;
+  color: #e25c00;
+  font-family: "iconfont";
+  font-weight: 400;
+}
+
+/* __右无柄箭头 */
+.el_afterIcon.el_afterIcon__chevRight::after {
+  content: '';
+  width: .375em;
+  height: .375em;
+  border-top: .125em solid #e25c00;
+  border-right: .125em solid #e25c00;
+  transform: rotate(45deg) translateY(-30%);
+}
+
+/* 标签 */
+.el_label {
+  display: inline-block;
+  padding: .2em .3em;
+  font-size: .75rem;
+  color: #fff;
+  background-color: #e25c00;
+  font-weight: bold;
+  border: 2px solid transparent;
+}
+/* 黄色 */
+.el_label__yellow {
+  color: #000;
+  background-color: #f1de00;
+}
+
+/* 应用在a标签 */
+a.el_label:focus,
+a.el_label:hover {
+  background-color: #fff;
+  border-color: currentColor;
+  color: #e25c00;
+}
+
+/* 一级标题 */
+.el_lv1Heading {
+  padding: 30px 10px;
+  font-size: 1.75rem;
+  text-align: center;
+  color: #fff;
+  background-color: #e25c00;
+}
+
+.el_lv1Heading > span {
+  position: relative;
+  /* 启用transform */
+  display: inline-block;
+  transform: translateY(-20%);
+}
+
+.el_lv1Heading > span::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  width: 80px;
+  height: 1px;
+  background-color: currentColor;
+  transform: translateX(-50%);
+}
+
+/* 二级标题 */
+.el_lv2Heading {
+  /* 考虑到留白的设计规则添加margin */
+  margin-top: 100px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 4px solid #e25c00;
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+/* 三级标题 */
+.el_lv3Heading {
+  padding-bottom: 6px;
+  border-bottom: 2px solid #e25c00;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* 四级标题 */
+.el_lv4Heading {
+  padding-left: 6px;
+  border-left: 2px solid #e25c00;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* 五级标题 */
+.el_lv5Heading {
+  color: #e25c00;
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+
+/* 六级标题 */
+.el_lv6Heading {
+  font-size: 1.125rem;
+}
+
